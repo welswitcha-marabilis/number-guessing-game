@@ -1,10 +1,9 @@
-
-
-
-
-
-
-
+"""
+first GitHub project, this is a number guessing game,
+purely for learning how to navigate GitHub, untill
+I am cofortable with making more complex projects.
+"""
+import random
 
 def get_random_number(low: int, high: int) -> int:
   return random.randint(low, high)
