@@ -15,20 +15,24 @@ def get_user_guess(low: int, high: int) -> int | None:
   if it makes it through the input validation.
   """
   print()
-  guess = input(f'guess a number between {low} and {high}: ')
+  try:
+    guess = input(f'guess a number between {low} and {high}: ')
 
-  if guess.isdigit():
-    guess = int(guess)
-    # make sure the guess is within bounds
-    if guess >= low and guess <= high:
-      return guess
+    if guess.isdigit():
+      guess = int(guess)
+      # make sure the guess is within bounds
+      if guess >= low and guess <= high:
+        return guess
+      else:
+        print()
+        print('invalid guess, try again.')
     else:
       print()
       print('invalid guess, try again.')
-  else:
+  except EOFError:
     print()
-    print('invalid guess, try again.')
-
+    print('EOFError, this program requires interactive input')
+    return None
 
 def check_user_guess(number: int, user_guess: int) -> bool:
   """
