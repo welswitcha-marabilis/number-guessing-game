@@ -1,1 +1,6 @@
-# it is 1 am where i am at right now, i will work on this tomorrow
+"""
+first GitHub project, this is a number guessing game,
+purely for learning how to navigate GitHub, untill
+I am cofortable with making more complex projects.
+"""
+import random
